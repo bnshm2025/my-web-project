@@ -1,0 +1,181 @@
+.schedule-section {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 10, 0.95) 40%, rgba(18, 18, 18, 0.2) 90%);
+    color: #d3d3d3;
+    font-family: 'Poppins', sans-serif;
+}
+
+.schedule-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-left: 3px solid #444;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-event {
+    position: relative;
+    padding: 30px 0;
+    padding-left: 60px;
+    margin-bottom: 20px;
+    transition:
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+    background-color: rgba(40, 40, 40, 0.9);
+    border-radius: 8px;
+}
+
+/* Hiệu ứng hover */
+.timeline-event:hover {
+    background-color: rgba(50, 50, 50, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    cursor: default;
+}
+
+/* Chấm tròn trong timeline */
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    left: -31px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #1a1a1a;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.timeline-event:hover::before {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+/* Ngày tháng */
+.timeline-date {
+    font-weight: 600;
+    color: #a5a5a5;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Tiêu đề sự kiện */
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: #e6e6e6;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Nội dung sự kiện */
+.timeline-content p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* Hiệu ứng vào khi cuộn */
+.timeline-event {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .schedule-title {
+        font-size: 2rem; /* Giảm kích thước tiêu đề trên màn hình nhỏ */
+    }
+
+    .timeline {
+        padding: 15px;
+        border-left: 2px solid #444;
+    }
+
+    .timeline-event {
+        padding-left: 50px; /* Giảm padding để phù hợp màn hình nhỏ hơn */
+    }
+
+    .timeline-event::before {
+        left: -25px; /* Điều chỉnh vị trí của chấm tròn */
+    }
+
+    .timeline-date {
+        font-size: 1rem; /* Giảm kích thước chữ của ngày tháng */
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem; /* Giảm kích thước chữ của tiêu đề */
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem; /* Giảm kích thước chữ của nội dung */
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-title {
+        font-size: 1.8rem;
+    }
+
+    .timeline {
+        padding: 10px;
+        border-left: 2px solid #444;
+    }
+
+    .timeline-event {
+        padding: 20px 0;
+        padding-left: 40px;
+    }
+
+    .timeline-event::before {
+        width: 12px;
+        height: 12px;
+        left: -20px; /* Điều chỉnh vị trí chấm tròn trên màn hình nhỏ */
+    }
+
+    .timeline-date {
+        font-size: 0.9rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.85rem;
+    }
+}

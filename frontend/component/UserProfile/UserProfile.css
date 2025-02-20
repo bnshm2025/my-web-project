@@ -1,0 +1,886 @@
+/* Tổng thể nền của form */
+.user-profile-background {
+    background: linear-gradient(to bottom right, #1a1a1a, #333333);
+    background-size: cover;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Container tổng thể */
+.user-profile-container {
+    display: flex;
+    background: #2c2c2c;
+    border: 1px solid #4d4d4d;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 80vw;
+    color: #e0e0e0;
+    min-height: 80vh;
+    margin-top: 60px;
+}
+
+/* Phần bên trái */
+.user-profile-left {
+    width: 22%;
+    padding-right: 20px;
+    border-right: 1px solid #4d4d4d;
+}
+
+.user-profile-avatar-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.user-profile-avatar-icon {
+    font-size: 80px;
+    color: #ffffff;
+}
+
+.user-profile-user-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.info-icon {
+    font-size: 15px;
+    color: #a0a0a0;
+    margin-right: 10px;
+}
+
+.info-text {
+    font-size: 10px;
+    color: #e0e0e0;
+    font-weight: 400;
+    overflow-wrap: break-word; /* Hỗ trợ tốt hơn */
+    white-space: normal; /* Cho phép xuống dòng */
+    word-break: break-all;
+    width: 90%;
+}
+
+.personal-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+}
+
+/* Phần thông tin tiền tệ */
+.user-profile-currency-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.user-profile-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.currency-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa biểu tượng và số */
+}
+
+.user-profile-avatar-section,
+.user-profile-personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Phần bên phải */
+.user-profile-right {
+    width: 78%;
+    padding-left: 20px;
+}
+
+/* Tabs */
+.user-profile-tabs {
+    display: flex;
+    border-bottom: 1px solid #4d4d4d;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.user-profile-tab {
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #e0e0e0;
+    transition: color 0.3s, border-bottom 0.3s;
+    width: auto;
+}
+
+.user-profile-tab.active {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Nội dung từng tab */
+.user-profile-tab-content {
+    position: relative;
+    padding: 20px;
+    background: #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid #4d4d4d;
+}
+
+/* Thông tin nhân vật */
+.user-profile-creature-info {
+    background: rgba(50, 50, 50, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #4d4d4d;
+}
+
+.up-creature-info-box {
+    margin-top: 10px;
+    background-color: #4b4b4b;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.up-creature-info {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.up-creature-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.up-creature-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+/* Bảng chi tiết khoản nạp */
+.user-profile-deposits-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.user-profile-deposits-table th,
+.user-profile-deposits-table td {
+    padding: 10px;
+    border: 1px solid #4d4d4d;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+.user-profile-deposits-table th {
+    background: #4d4d4d;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.user-profile-deposits-table tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Phần Bảo Mật */
+.security-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.security-info p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #b0b0b0;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #4d4d4d;
+}
+
+.security-section {
+    padding: 15px 20px;
+    background: #3e3e3e;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid #5b5b5b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.security-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4a4a4a, #5b5b5b);
+    color: #ffffff;
+    border: 1px solid #666;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    min-width: 130px;
+}
+
+.security-button:hover {
+    background: linear-gradient(135deg, #5b5b5b, #6c6c6c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.security-button:active {
+    transform: translateY(0);
+    background: #5b5b5b;
+}
+
+.security-info .security-button + .security-button {
+    margin-left: 20px;
+}
+
+/* Tiêu đề và hiệu ứng tab bảo mật */
+.up-profile-section.security-tab h3 {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.up-profile-section.security-tab {
+    padding: 25px;
+    background: #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border: 1px solid #4d4d4d;
+}
+
+.security-section .security-button svg {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Bố cục tổng thể cho PaymentScreen với nền tối */
+.up-hongmoon-payment {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #3a3a3a; /* Màu nền đồng bộ với container */
+}
+
+/* Phần chứa ô nhập và nút tạo QR */
+.up-hongmoon-payment-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Phần chứa mã QR và thông tin thanh toán */
+.up-hongmoon-payment-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3a3a3a; /* Màu nền sáng hơn cho vùng QR */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Ô nhập số tiền */
+.up-hongmoon-input {
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #5b5b5b;
+    border-radius: 8px;
+    color: #e0e0e0;
+    background-color: #2c2c2c;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.up-hongmoon-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* Viền xanh sáng khi focus */
+}
+
+/* Nút tạo QR */
+.up-hongmoon-button {
+    padding: 12px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8a8a8a, #6d6d6d);
+    border: none;
+    border-radius: 30px; /* Bo tròn nhiều hơn */
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(169, 169, 169, 0.3); /* Bóng đổ mềm màu bạc */
+}
+
+.up-hongmoon-button:hover {
+    background: linear-gradient(135deg, #bfbfbf, #8a8a8a); /* Bạc đậm hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nâng nhẹ khi hover */
+    box-shadow: 0 6px 16px rgba(169, 169, 169, 0.4);
+}
+
+/* Tin nhắn lỗi */
+.up-hongmoon-error {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Phong cách cho mã QR và thông tin */
+/* Container bố cục hai cột */
+.up-hongmoon-qr-container {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* Cột chung cho cả hai phần */
+.up-hongmoon-qr-column {
+    flex: 1;
+    min-width: 300px;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #4d4d4d;
+}
+
+/* Tiêu đề */
+.up-hongmoon-qr-column h2 {
+    font-size: 20px;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Cột trái: Mã QR và hướng dẫn */
+.up-hongmoon-qr-left p {
+    font-size: 14px;
+    color: #bdbdbd;
+    margin: 8px 0;
+}
+
+/* Hình ảnh mã QR */
+.up-hongmoon-qr-image {
+    max-width: 200px;
+    height: auto;
+    margin: 15px 0;
+    border: 1px solid #4d4d4d;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Cột phải: Thông tin tài khoản */
+.up-hongmoon-qr-right p {
+    font-size: 14px;
+    color: #bdbdbd;
+    margin-bottom: 15px;
+}
+
+.account-info p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #4d4d4d;
+}
+
+.account-info .highlight {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* Nút icon copy */
+.payment-icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #7c7c7c;
+    transition: color 0.3s;
+}
+
+.payment-icon-button:hover {
+    color: #ffffff;
+}
+
+.up-hongmoon-qr img {
+    max-width: 200px;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #4d4d4d;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Phần chứa các nút mức giá cố định */
+.up-hongmoon-predefined-amounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.up-hongmoon-amount-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.up-hongmoon-amount-button:hover {
+    background: linear-gradient(135deg, #a9a9a9, #808080);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+.up-hongmoon-amount-button:active {
+    transform: translateY(0);
+    background: #a9a9a9;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.up-hongmoon-back-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10; /* Đảm bảo nó nổi trên các phần tử khác */
+}
+
+.up-hongmoon-back-button {
+    min-width: 30px;
+    min-height: 30px;
+    background: none;
+    font-size: 17px;
+    border: none;
+    color: #8c8c8c;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.up-hongmoon-back-button:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+.up-hongmoon-back-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.payment-icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #7c7c7c;
+}
+
+.payment-warning {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #ffecec; /* Màu nền hồng nhạt */
+    border: 1px solid #ff5c5c;
+    border-radius: 8px;
+    color: #d8000c;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.5;
+    box-shadow: 0 4px 8px rgba(255, 92, 92, 0.2);
+    max-width: 100%; /* Giới hạn chiều rộng */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-warning p {
+    margin: 0;
+    color: #333;
+    display: inline;
+}
+
+.payment-warning .highlight {
+    font-weight: inherit;
+    color: #d8000c;
+    display: inline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.payment-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.payment-success h2,
+.payment-success p {
+    margin: 10px 0;
+}
+
+.checkmark-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkmark-circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    animation: pulse 1.5s ease-out infinite;
+}
+
+.checkmark {
+    font-size: 36px;
+    color: white;
+    animation: tick 1s ease-out;
+}
+
+/* Container của bảng để làm bảng có thể cuộn */
+.up-deposits-table-container {
+    max-height: 400px; /* Chiều cao cố định của bảng */
+    overflow-y: auto; /* Cho phép cuộn dọc */
+    margin-top: 20px;
+}
+
+/* Định dạng cho bảng */
+.up-deposits-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center; /* Căn giữa tất cả các cột trong bảng */
+}
+
+/* Định dạng các thẻ th */
+.up-deposits-table th,
+.up-deposits-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center; /* Căn giữa các ô trong bảng */
+}
+
+/* Tiêu đề cột cố định */
+.up-deposits-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    position: sticky; /* Cố định tiêu đề */
+    top: 0; /* Đặt tiêu đề cố định ở trên cùng */
+    z-index: 1; /* Đảm bảo tiêu đề luôn nằm trên phần thân bảng khi cuộn */
+}
+
+/* Định dạng các ô dữ liệu */
+.up-deposits-table td {
+    font-size: 14px;
+}
+
+/* Hiệu ứng hover cho dòng */
+.up-deposits-table tr:hover {
+    background-color: #4caf50; /* Màu nền khi hover (màu xanh lá) */
+    color: white; /* Thay đổi màu chữ thành trắng khi hover */
+}
+
+/* Căn giữa nội dung của toàn bộ bảng */
+.up-deposits-table-container {
+    overflow-x: auto; /* Cho phép cuộn ngang nếu bảng quá rộng */
+}
+
+/* Căn giữa văn bản trong ô khi hover */
+.up-deposits-table tr:hover td {
+    color: white; /* Thay đổi màu chữ thành trắng khi hover */
+}
+
+/* Cải thiện màu sắc của các tiêu đề khi hover */
+.up-deposits-table th:hover {
+    background-color: #ddd; /* Màu nền của tiêu đề khi hover */
+    color: #333; /* Màu chữ tiêu đề khi hover */
+}
+
+/* Đặt nền cho form */
+.up-deposit-form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Định dạng cho input */
+.up-deposit-form input[type='number'] {
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #5b5b5b;
+    border-radius: 8px;
+    color: #e0e0e0;
+    background-color: #2c2c2c;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.up-deposit-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* Viền xanh sáng khi focus */
+}
+
+/* Định dạng cho button */
+.deposit-button {
+    padding: 12px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8a8a8a, #6d6d6d);
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(169, 169, 169, 0.3);
+}
+
+.deposit-button:hover {
+    background: linear-gradient(135deg, #bfbfbf, #8a8a8a); /* Bạc đậm hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nâng nhẹ khi hover */
+    box-shadow: 0 6px 16px rgba(169, 169, 169, 0.4);
+}
+
+.deposit-button:disabled {
+    background-color: #ffffff; /* Màu xám khi disabled */
+    cursor: not-allowed;
+}
+
+/* Hover effect cho button */
+.deposit-button:not(:disabled):hover {
+    background-color: #555; /* Màu đen sáng hơn khi hover */
+}
+
+/* Định dạng cho thông báo thành công */
+.success-message {
+    color: #4caf50; /* Màu xanh lá cây */
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Định dạng cho thông báo lỗi */
+.error-message {
+    color: #f44336; /* Màu đỏ */
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Định dạng cho tỷ lệ chuyển đổi */
+.exchange-rate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ffffff; /* Màu chữ */
+    gap: 5px;
+    font-style: italic;
+}
+
+/* Định dạng cho chữ "Tỉ lệ:" */
+.rate-label {
+    font-weight: bold;
+    margin-right: 5px; /* Khoảng cách giữa chữ "Tỉ lệ:" và tỷ lệ */
+}
+
+/* --------------------------------------------------------------------- */
+/* responsive */
+
+.back-button {
+    background: transparent;
+    border: none;
+    color: #dadada;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: #fff;
+}
+/* Tabs nằm dọc trên màn hình nhỏ */
+
+@media (max-width: 1270px) {
+    .user-profile-tabs {
+        flex-direction: column;
+        border-bottom: none;
+        gap: 10px;
+        align-items: stretch;
+        padding: 0 10px;
+    }
+
+    .user-profile-tab {
+        width: 100%;
+        text-align: left;
+        border: 1px solid #4d4d4d;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 16px;
+        background: #3a3a3a;
+        color: #ffffff;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .user-profile-tab:hover {
+        background: #4d4d4d;
+        transform: scale(1.02);
+    }
+
+    .user-profile-tab.active {
+        font-weight: bold;
+        background: #575757;
+        border: 1px solid #575757;
+    }
+
+    .user-profile-tab:last-child {
+        margin-bottom: 0;
+    }
+
+    .up-hongmoon-back-button {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .user-profile-tabs {
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 5px;
+    }
+
+    .user-profile-tab {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 6px;
+        background: #2e2e2e;
+        color: #ffffff;
+    }
+
+    .user-profile-tab:hover {
+        background: #3c3c3c;
+        transform: scale(1.01);
+    }
+
+    .user-profile-tab.active {
+        font-weight: bold;
+        background: #4a4a4a;
+    }
+
+    .user-profile-container {
+        flex-direction: column;
+        border: none;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .user-profile-left {
+        width: 100%;
+        border-right: none;
+        padding: 20px;
+        border-radius: 12px;
+        background: #2c2c2c;
+        border: 1px solid #4d4d4d;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        margin-bottom: 20px;
+    }
+    .user-profile-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .security-section {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .security-section-title {
+        display: none;
+    }
+
+    .security-info {
+        gap: 0;
+    }
+
+    .security-button {
+        width: 100%;
+    }
+
+    .up-hongmoon-payment {
+        padding: 0;
+    }
+
+    .up-hongmoon-qr-column {
+        min-width: 200px;
+        width: 100%;
+    }
+}

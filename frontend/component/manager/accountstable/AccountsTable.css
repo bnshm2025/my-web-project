@@ -1,0 +1,183 @@
+/* AccountsTable.css */
+
+/* Đặt nền và căn chỉnh toàn bộ container */
+.accounts-container {
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Chỉnh sửa phần nội dung chính của bảng điều khiển */
+.accounts-content {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề bảng điều khiển */
+.accounts-header-container {
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: space-between; /* Căn đều các phần tử theo chiều ngang */
+    margin-bottom: 20px;
+    gap: 20px; /* Giảm khoảng cách giữa các phần tử để chúng gần nhau hơn */
+}
+
+.accounts-header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    flex: 1; /* Đảm bảo tiêu đề chiếm không gian còn lại */
+}
+
+.accounts-total-count {
+    font-size: 16px;
+    color: #555;
+}
+
+.accounts-account-count,
+.accounts-creature-count,
+.accounts-deleted-creature-count {
+    font-size: 16px;
+    color: #000;
+}
+
+.accounts-accounts-count,
+.accounts-created-count {
+    font-weight: bold;
+    color: green;
+}
+
+.accounts-deleted-count {
+    font-weight: bold;
+    color: red;
+}
+
+/* Bảng người dùng */
+.accounts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.accounts-table th,
+.accounts-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.accounts-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.accounts-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.accounts-table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Điều chỉnh độ rộng của các cột */
+.accounts-table th,
+.accounts-table td {
+    text-align: center;
+}
+
+.accounts-table td {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Box cuộn cho danh sách người dùng */
+.accounts-table-container {
+    max-height: 75vh; /* Điều chỉnh chiều cao tối đa cho box */
+    overflow-y: auto; /* Kích hoạt scroll dọc khi nội dung vượt quá chiều cao */
+    margin-top: 10px;
+}
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Chiều cao đủ để hiển thị spinner */
+    margin-top: 20px;
+}
+
+.accounts-search-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.accounts-search-input {
+    width: 250px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+.accounts-search-input:focus {
+    border-color: #36d7b7;
+    outline: none;
+}
+
+.btn-character {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.button-group {
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.btn-edit {
+    background-color: #007bff; /* Màu xanh cho nút Edit */
+}
+
+.btn-add {
+    background-color: #28a745; /* Màu xanh lá cho nút Add */
+}
+
+.btn-character:hover {
+    background-color: #0056b3; /* Màu tối hơn khi hover */
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.btn-add:hover {
+    background-color: #218838; /* Màu tối hơn cho Add khi hover */
+}
+/* Các điều chỉnh cho giao diện responsive */
+@media screen and (max-width: 768px) {
+    .accounts-table {
+        font-size: 12px;
+    }
+
+    .accounts-header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .accounts-header-title {
+        margin-bottom: 10px;
+    }
+
+    .accounts-total-count {
+        font-size: 14px;
+    }
+}

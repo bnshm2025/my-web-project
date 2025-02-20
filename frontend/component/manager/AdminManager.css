@@ -1,0 +1,133 @@
+/* Import Open Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+/* Container setup */
+.admin-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif; /* Áp dụng Open Sans */
+    background-color: #000000;
+    color: #000000;
+}
+
+/* Sidebar styles */
+.admin-sidebar {
+    width: 250px;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-logo {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    padding: 30px;
+}
+
+.admin-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-menu li {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-menu li:last-child {
+    border-bottom: none; /* Loại bỏ đường kẻ ở phần tử cuối */
+}
+
+.admin-menu li:hover {
+    background-color: rgba(39, 39, 39, 0.8);
+    border-left: 4px solid #ff0000; /* Thêm đường kẻ bên trái */
+    padding-left: 11px; /* Điều chỉnh padding để giữ văn bản không bị lệch */
+}
+
+.admin-menu li.active {
+    background-color: rgba(39, 39, 39, 0.8); /* Màu nền cho mục đang mở */
+    border-left: 4px solid #ff0000; /* Đường kẻ bên trái khi mục mở */
+    padding-left: 11px; /* Giữ căn lề */
+}
+
+/* Content area styles */
+.admin-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #f4f6f9;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600; /* Áp dụng Open Sans bold */
+}
+
+.admin-content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Submenu styles */
+.admin-submenu {
+    list-style: none;
+    padding-left: 20px; /* Thụt vào cho các mục con */
+    margin: 5px 0 10px;
+}
+
+.admin-submenu li {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.admin-submenu li:hover {
+    background-color: rgba(75, 110, 168, 0.2);
+    border-left: 3px solid #4b6ea8; /* Đường kẻ bên trái khi hover */
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    background-color: #4b6ea8;
+    color: #ffffff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 14px;
+    color: #555;
+}

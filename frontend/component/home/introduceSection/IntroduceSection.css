@@ -1,0 +1,81 @@
+/* Toàn bộ section với hình nền mờ */
+.introduce-section {
+    position: relative;
+    background-image: url('../../../assets/bg/introduce.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    color: #e6e6e6; /* Màu tổng thể */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Lớp phủ tối để làm mờ nền */
+.introduce-section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* Khung chứa nội dung */
+.introduce-section-content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tiêu đề chính */
+.introduce-section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f0a500; /* Màu vàng cam nhẹ, tạo cảm giác ấm áp và thu hút */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Phong cách đoạn văn bản */
+.introduce-section-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #cccccc; /* Màu xám sáng cho văn bản */
+    text-align: justify;
+}
+
+/* Nhấn mạnh các từ khóa */
+.introduce-section-highlight {
+    color: #80cbc4; /* Màu xanh ngọc dịu nhẹ, hiện đại */
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(128, 203, 196, 0.6); /* Hiệu ứng sáng nhẹ */
+}
+
+/* Hiệu ứng khi hover toàn bộ section */
+.introduce-section-content-wrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Hiệu ứng vào khi cuộn tới */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.introduce-section-content-wrapper {
+    animation: fadeInUp 1s ease-out;
+}

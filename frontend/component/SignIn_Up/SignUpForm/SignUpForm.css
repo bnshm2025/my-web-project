@@ -1,0 +1,268 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signup-background {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 50%, #e9ecef 50%);
+}
+
+.signup-container {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.signup-box {
+    text-align: center;
+    width: 100%;
+}
+
+.signup-title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    font-size: 24px;
+}
+
+.signup-input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.signup-input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.group-input-password {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#input-password {
+    border: none;
+}
+
+.password-icon {
+    padding: 0 20px;
+    color: #666;
+}
+
+.signup-input-group input:focus {
+    border-color: #666;
+}
+
+/* Xóa hiệu ứng autofill và giữ màu trắng mặc định */
+input:-webkit-autofill {
+    background-color: #fff !important; /* Màu nền trắng */
+    color: #000 !important; /* Màu chữ đen */
+    box-shadow: 0 0 0 30px #fff inset !important; /* Xóa hiệu ứng shadow */
+}
+
+input:-internal-autofill-selected {
+    background-color: #fff !important; /* Nền trắng */
+    color: #000 !important; /* Màu chữ đen */
+    box-shadow: 0 0 0 30px #fff inset !important; /* Xóa hiệu ứng shadow */
+}
+
+/* Vô hiệu hóa biểu tượng mật khẩu mặc định của trình duyệt */
+input[type='password']::-ms-reveal,
+input[type='password']::-webkit-contacts-auto-fill-button,
+input[type='password']::-webkit-search-cancel-button {
+    display: none !important;
+}
+
+/* Lỗi nhập liệu */
+.signup-error-input {
+    border-color: #ef4444;
+    background-color: #fdecea;
+    animation: signup-shake 0.3s ease-in-out;
+}
+
+@keyframes signup-shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-4px);
+    }
+    50% {
+        transform: translateX(4px);
+    }
+    75% {
+        transform: translateX(-4px);
+    }
+}
+
+/* Thông báo lỗi */
+.signup-error-text {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+    color: #ef4444;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.signup-error-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.signup-error-icon {
+    margin-right: 5px;
+    font-size: 1.2em;
+    color: #ef4444;
+}
+
+/* Nút đăng ký */
+.signup-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.signup-button:disabled {
+    background-color: #b8b8b8; /* Màu nền khi nút bị vô hiệu hóa */
+    color: #7e7e7e; /* Màu chữ khi nút bị vô hiệu hóa */
+    cursor: not-allowed; /* Con trỏ chuột khi hover trên nút bị vô hiệu hóa */
+}
+
+.signup-recaptcha-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 20px; /* Thêm khoảng cách phía trên nếu cần */
+}
+
+.recaptcha-box {
+    display: inline-block;
+}
+
+.signup-button:disabled:hover {
+    background-color: #d3d3d3; /* Không thay đổi màu nền khi hover trên nút disabled */
+}
+
+.signup-button:hover {
+    background-color: #555;
+}
+
+/* Chuyển đổi đăng ký và đăng nhập */
+.signup-toggle-text {
+    font-size: 15px;
+    color: #888;
+    margin-top: 20px;
+}
+
+.signup-toggle-text a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Container cho các ô mã */
+.code-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Phong cách của mỗi ô nhập */
+.code-input {
+    width: 40px;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.code-input:focus {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+}
+
+/* Nút xác nhận */
+.verification-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.verification-button:hover {
+    background-color: #555;
+}
+
+/* Nút gửi lại mã */
+.resend-text {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #333;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.resend-text:hover {
+    color: #333;
+}
+
+.resend-text[disabled] {
+    color: #999;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+/* --------------------------------------------- */
+/* responsive */
+@media (max-width: 800px) {
+    .signup-container {
+        margin: 0 20px;
+        padding: 30px;
+    }
+}

@@ -1,0 +1,31 @@
+.up-hongmoon-captcha {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+.up-hongmoon-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0;
+}
+
+.up-hongmoon-button:disabled {
+    background: #2a2a2a;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.up-hongmoon-button:hover:not(:disabled) {
+    background: linear-gradient(45deg, #0056b3, #004494);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}

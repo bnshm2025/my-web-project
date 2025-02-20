@@ -1,0 +1,263 @@
+.change-email-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.change-email-modal {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #333;
+}
+
+.change-email-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.change-email-header h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.change-email-close-button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.change-email-close-button:hover {
+    color: #fff;
+}
+
+.change-email-form-group {
+    margin-bottom: 15px;
+}
+
+.change-email-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+.change-email-form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.change-email-current {
+    background: #1a1a1a !important;
+    color: #666 !important;
+    cursor: not-allowed;
+}
+
+.change-email-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.change-email-cancel-button {
+    padding: 8px 16px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: transparent;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.change-email-submit-button {
+    padding: 10px 24px;
+    background: linear-gradient(45deg, #333333, #4a4a4a);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.change-email-submit-button:hover:not(:disabled) {
+    background: linear-gradient(45deg, #4a4a4a, #666666);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.change-email-submit-button:disabled {
+    background: #2a2a2a;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.change-email-cancel-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.change-email-captcha {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.change-email-otp-section {
+    margin-top: 10px;
+}
+
+.change-email-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.change-email-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #2c2c2c;
+    color: #e0e0e0;
+    font-size: 14px;
+    height: 40px;
+}
+
+.change-email-otp-button {
+    padding: 8px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    height: 40px;
+}
+
+.change-email-otp-button:hover:not(:disabled) {
+    background-color: #444;
+}
+
+.change-email-otp-button:disabled {
+    background-color: #222;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.change-email-otp-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.change-email-otp-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #2c2c2c;
+    color: #e0e0e0;
+    font-size: 14px;
+    height: 40px;
+}
+
+.change-email-verify-button {
+    padding: 8px 20px;
+    height: 40px;
+    background: linear-gradient(45deg, #333333, #4a4a4a);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.change-email-verify-button:hover:not(:disabled) {
+    background: linear-gradient(45deg, #4a4a4a, #666666);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.change-email-verify-button:disabled {
+    background: #2a2a2a;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.change-email-otp-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.change-email-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 4px 8px;
+    background-color: rgba(40, 167, 69, 0.1);
+    border-radius: 4px;
+}
+
+.change-email-verified-badge svg {
+    width: 16px;
+    height: 16px;
+}
+
+.change-email-cooldown {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+} 
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+}
+
+.invalid-email {
+    border-color: #ff4444 !important;
+    background-color: rgba(255, 0, 0, 0.1) !important;
+}

@@ -1,0 +1,300 @@
+/* Nền cho toàn bộ trang NewsDetail */
+.background-news-detail {
+    background-color: #dbd9d6;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container chính chứa hai cột: news-content và latest-news */
+.container-news-detail {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Hai cột có chiều rộng bằng nhau */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    background-color: #dbd9d6;
+}
+
+/* Cột chứa nội dung bài viết */
+.news-content-details {
+    background-color: #dbd9d6;
+    padding: 20px;
+}
+
+.news-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.news-date {
+    font-size: 1em;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+/* Ảnh chính của bài viết */
+.news-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Nội dung bài viết */
+.news-content-body {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Cột tin tức mới nhất */
+.latest-news {
+    background-color: #dbd9d6;
+    padding: 20px;
+}
+
+.latest-news-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.latest-news-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Bài viết mới nhất với ảnh ở trên và thông tin bên dưới */
+.latest-news-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.latest-news-item:hover {
+    cursor: pointer;
+}
+
+.latest-news-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Đảm bảo tất cả ảnh trong latest-news có kích thước cố định và đồng nhất */
+.latest-news-image {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của cột */
+    aspect-ratio: 16 / 9; /* Thiết lập tỷ lệ khung hình 16:9 hoặc điều chỉnh tùy theo nhu cầu */
+    object-fit: cover; /* Giữ tỷ lệ mà không bị biến dạng */
+    border-radius: 3px; /* Bo tròn góc */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.latest-news-item:hover .latest-news-image {
+    transform: scale(1.05); /* Phóng to ảnh khi hover */
+}
+
+/* Thông tin dưới ảnh tin tức mới nhất */
+.latest-news-info {
+    text-align: left;
+    width: 100%;
+}
+
+.latest-new-title {
+    font-size: 1.3em;
+    margin: 5px 0;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.latest-news-date {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.date-icon {
+    margin-right: 5px;
+    color: #777; /* Màu sắc biểu tượng */
+    vertical-align: middle; /* Căn giữa biểu tượng với text */
+}
+
+.news-date,
+.latest-news-date {
+    display: flex;
+    align-items: center;
+}
+
+/* Cột chứa biểu tượng mạng xã hội */
+.social-media-column {
+    display: flex;
+    flex-direction: column; /* Xếp chồng biểu tượng theo chiều dọc */
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa các biểu tượng */
+    position: relative;
+    margin-top: 30px;
+}
+
+/* Biểu tượng mạng xã hội không màu */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    color: #333; /* Màu xám đen cho biểu tượng */
+    border-radius: 50%; /* Hình tròn */
+    opacity: 0.5; /* Độ trong suốt ban đầu */
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1; /* Hiệu ứng hover để biểu tượng rõ hơn */
+}
+
+.news-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 20px 0;
+}
+
+.news-tag {
+    background-color: rgba(200, 0, 0, 0.7);
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* ------------------------------------------------------- */
+/* Responsive */
+@media (max-width: 1230px) {
+    .container-news-detail {
+        grid-template-columns: 1fr;
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .latest-news {
+        margin-top: 20px;
+    }
+
+    .news-title {
+        font-size: 2em;
+    }
+
+    .news-content-body {
+        font-size: 1em;
+    }
+
+    .latest-news-title {
+        font-size: 1.8em;
+    }
+
+    .latest-news-item {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .background-news-detail {
+        padding: 60px 10px;
+    }
+
+    .container-news-detail {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .news-title {
+        font-size: 1.8em;
+    }
+
+    .news-content-body {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .latest-news {
+        margin-top: 20px;
+    }
+
+    .latest-news-title {
+        font-size: 1.5em;
+    }
+
+    .latest-news-image {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+    }
+
+    .news-tag {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-news-detail {
+        padding: 60px 5px;
+    }
+
+    .container-news-detail {
+        width: 86%;
+        gap: 5px;
+    }
+
+    .news-title {
+        font-size: 1.5em;
+    }
+
+    .news-date {
+        font-size: 0.8em;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .news-content-body {
+        font-size: 0.9em;
+        line-height: 1.3;
+    }
+
+    .latest-news-item {
+        margin-bottom: 10px;
+    }
+
+    .latest-news-title {
+        font-size: 1.2em;
+    }
+
+    .latest-news-image {
+        width: 100%;
+        aspect-ratio: auto;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+    }
+
+    .news-tag {
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+}

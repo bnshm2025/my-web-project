@@ -1,0 +1,216 @@
+/* NewsTable Container */
+.news-table-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    overflow-x: auto;
+}
+
+/* Container to enable independent scrolling */
+.news-table-container .news-table-scroll {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Table styling */
+.news-table-container .news-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.news-table-container .news-table thead {
+    background-color: #f5f7fa;
+    border-top: 2px solid #e1e6ef;
+}
+
+.news-table-container .news-table th {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    border-bottom: 2px solid #e1e6ef;
+    border-right: 1px solid #e1e6ef;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Table cells styling */
+.news-table-container .news-table td {
+    padding: 12px;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 1px solid #e1e6ef;
+    border-right: 1px solid #e1e6ef;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-image-column {
+    width: 100px;
+    text-align: center;
+}
+
+/* Styling for images within the table */
+.news-table-container .news-table td img.post-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Định dạng cho cột chứa radio */
+.news-table-container .news-table td.main-news-column,
+.news-table-container .news-table th.main-news-column {
+    width: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Định dạng cho nút radio */
+.news-table-container .main-news-column input[type='radio'] {
+    transform: scale(1.2); /* Tăng kích thước radio cho dễ nhìn hơn */
+    cursor: pointer;
+}
+
+/* Title and content column width */
+.news-table-container .news-table td.title-column,
+.news-table-container .news-table th.title-column {
+    max-width: 150px;
+}
+
+.news-table-container .news-table td.content-column,
+.news-table-container .news-table th.content-column {
+    max-width: 300px;
+}
+
+.news-table-container .news-table td.actions-column {
+    width: 80px;
+}
+
+/* Alternate row background */
+.news-table-container .news-table tbody tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+.news-table-container .news-table tbody tr:hover {
+    background-color: #e6effc;
+    transition: background-color 0.3s ease;
+}
+
+/* Action button styling */
+.news-table-container .action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.news-table-container .edit-btn,
+.news-table-container .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.news-table-container .edit-btn {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.news-table-container .edit-btn:hover {
+    background-color: #357ab7;
+}
+
+.news-table-container .delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.news-table-container .delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Header for table with add button */
+.news-table-container .table-header {
+    display: flex;
+    justify-content: space-between; /* Align search bar on left, button on right */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Add post button styling */
+.news-table-container .add-post-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.news-table-container .add-post-btn:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+}
+
+.news-table-container .add-post-btn:active {
+    background-color: #2e7d32;
+    transform: translateY(0);
+}
+
+.stt-column {
+    width: 50px;
+    text-align: center;
+}
+
+/* Styling for total posts display */
+.total-posts {
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* CSS for ClipLoader */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* CSS for search bar */
+.search-bar {
+    margin-right: auto; /* Ensures search bar is aligned to the left */
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.news-main-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.news-main-tag {
+    background-color: rgba(200, 0, 0, 0.7);
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 3px;
+    font-size: 16px;
+}
